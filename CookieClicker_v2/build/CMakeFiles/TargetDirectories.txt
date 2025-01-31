@@ -1,0 +1,3 @@
+C:/Users/marce/CLionProjects/SDLTest/CookieClicker_v2/build/CMakeFiles/CookieClicker.dir
+C:/Users/marce/CLionProjects/SDLTest/CookieClicker_v2/build/CMakeFiles/edit_cache.dir
+C:/Users/marce/CLionProjects/SDLTest/CookieClicker_v2/build/CMakeFiles/rebuild_cache.dir

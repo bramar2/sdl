@@ -1,0 +1,11 @@
+# ninja log v6
+5	159	7600289429650140	CMakeFiles/CookieClicker.dir/Cursor.c.obj	853406114f7272fd
+42	150	7600280725458437	CMakeFiles/CookieClicker.dir/Utils.c.obj	5c3d28761fac6f14
+13	502	7600280725178423	CMakeFiles/CookieClicker.dir/CookieBmp.c.obj	8a5c153d46ec2966
+5	209	7600289334499997	CMakeFiles/CookieClicker.dir/CookieClicker.c.obj	e227f1a34d908e89
+17	181	7600284162502863	CMakeFiles/CookieClicker.dir/Cookie.c.obj	7559fbba64477983
+29	248	7600280725348448	CMakeFiles/CookieClicker.dir/Counter.c.obj	258ed3aca36a37d8
+161	308	7600289431190041	CookieClicker.exe	a18404c1b75978c9
+15	167	7600291956982595	CMakeFiles/CookieClicker.dir/Cursor.c.obj	853406114f7272fd
+5	181	7600291956872621	CMakeFiles/CookieClicker.dir/CookieClicker.c.obj	e227f1a34d908e89
+183	342	7600291958642597	CookieClicker.exe	a18404c1b75978c9
