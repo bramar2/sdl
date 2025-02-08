@@ -53,7 +53,24 @@ jobs:
       shell: bash
       run: |
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
-
+    - name: Install SDL3 (Ubuntu)
+      if: runner.os == 'Linux'
+      run: |
+        sudo apt update
+        sudo apt install -y build-essential cmake git
+        git clone --depth 1 https://github.com/libsdl-org/SDL.git -b main
+        cd SDL
+        mkdir build && cd build
+        cmake .. -DSDL_SHARED=ON -DSDL_STATIC=OFF
+        make -j$(nproc)
+        sudo make install
+    - name: Install SDL3 (Windows)
+      if: runner.os == 'Windows'
+      shell: pwsh
+      run: |
+        Invoke-WebRequest -Uri "https://github.com/libsdl-org/SDL/releases/latest/download/SDL3-devel-VC.zip" -OutFile "SDL3.zip"
+        Expand-Archive -Path "SDL3.zip" -DestinationPath "$env:GITHUB_WORKSPACE\SDL3"
+        echo "SDL3_PATH=$env:GITHUB_WORKSPACE\SDL3" | Out-File -FilePath $env:GITHUB_ENV -Append
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
