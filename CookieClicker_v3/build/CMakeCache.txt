@@ -248,6 +248,9 @@ CookieClicker_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 CookieClicker_SOURCE_DIR:STATIC=C:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3
 
+//The directory containing a CMake configuration file for SDL3.
+SDL3_DIR:PATH=C:/Users/marce/cpp_libraries/SDL3-3.2.4/cmake
+
 
 ########################
 # INTERNAL cache entries

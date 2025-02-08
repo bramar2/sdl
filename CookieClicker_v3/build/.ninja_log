@@ -1,15 +1,15 @@
 # ninja log v6
-33	243	7605621950288836	CMakeFiles/CookieClicker.dir/Cursor.c.obj	853406114f7272fd
-206	382	7605625381179566	CookieClicker.exe	a18404c1b75978c9
-20	276	7605618188558874	CMakeFiles/CookieClicker.dir/Counter.c.obj	258ed3aca36a37d8
-19	235	7605621950148896	CMakeFiles/CookieClicker.dir/Cookie.c.obj	7559fbba64477983
-5	200	7605625379179553	CMakeFiles/CookieClicker.dir/CookieClicker.c.obj	e227f1a34d908e89
-15	648	7605600419066401	CMakeFiles/CookieClicker.dir/CookieBmp.c.obj	8a5c153d46ec2966
-50	228	7605600419436490	CMakeFiles/CookieClicker.dir/Utils.c.obj	5c3d28761fac6f14
 46	699	7607459536434737	CMakeFiles/CookieClicker.dir/Utils.c.obj	492ca3d142c55ec4
-74	746	7607459536704699	CMakeFiles/CookieClicker.dir/Cursor.c.obj	3cda62cae151cf9b
-61	766	7607459536584707	CMakeFiles/CookieClicker.dir/Cookie.c.obj	28e2caa17f74ec0d
-5	800	7607459536024774	CMakeFiles/CookieClicker.dir/CookieClicker.c.obj	76c4df5c23114a8a
-32	830	7607459536284722	CMakeFiles/CookieClicker.dir/Counter.c.obj	b801ae004aaab6af
 18	994	7607459536144727	CMakeFiles/CookieClicker.dir/CookieBmp.c.obj	fc58c5592b5654ea
+5	800	7607459536024774	CMakeFiles/CookieClicker.dir/CookieClicker.c.obj	76c4df5c23114a8a
+61	766	7607459536584707	CMakeFiles/CookieClicker.dir/Cookie.c.obj	28e2caa17f74ec0d
+32	830	7607459536284722	CMakeFiles/CookieClicker.dir/Counter.c.obj	b801ae004aaab6af
 997	1367	7607459545919303	CookieClicker.exe	51aa82d21004c1c6
+74	746	7607459536704699	CMakeFiles/CookieClicker.dir/Cursor.c.obj	3cda62cae151cf9b
+60	219	7607478069540511	CMakeFiles/CookieClicker.dir/Utils.c.obj	53215c59a163ae79
+14	320	7607478069090507	CMakeFiles/CookieClicker.dir/CookieClicker.c.obj	b01976a5dc4ce0f4
+78	358	7607478069730518	CMakeFiles/CookieClicker.dir/Cookie.c.obj	5432d8cb14b1159b
+114	366	7607478070090495	CMakeFiles/CookieClicker.dir/Cursor.c.obj	d69a61e97572a847
+41	370	7607478069340503	CMakeFiles/CookieClicker.dir/Counter.c.obj	d99f4e56062cc242
+28	626	7607478069210501	CMakeFiles/CookieClicker.dir/CookieBmp.c.obj	154cefb35ecd4cb4
+630	835	7607478075232269	CookieClicker.exe	e01994622d718ad5
