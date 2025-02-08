@@ -3,7 +3,7 @@
 #include "Utils.h"
 #include <assert.h>
 #include <math.h>
-#include <stdlib.h>
+#include <stdio.h>
 
 typedef struct {
 	int X, Y;
@@ -176,8 +176,8 @@ void Counter_Init() {}
 
 void Counter_AnimateChange(int currentValue, int targetValue) {
 	char current[10], target[10];
-	itoa(currentValue, current, 10);
-	itoa(targetValue, target, 10);
+	sprintf(current, "%i", currentValue);
+	sprintf(target, "%i", targetValue);
 	int beforeLength = strlen(current);
 	int afterLength = strlen(target);
 	int position = Utils_MiddleWidth(Counter_Width) + (Counter_Digits - 1) * Counter_DigitDistance;

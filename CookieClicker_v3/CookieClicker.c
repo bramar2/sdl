@@ -51,30 +51,10 @@ void App_Render() {
 
 	SDL_RenderClear(renderer);
 
-	char dbg_text[40];
-    itoa(frameSz, dbg_text, 10);
-    uint64_t len = strlen(dbg_text);
-    uint64_t extra_len = strlen(DBG_EXTRA);
-    for(size_t i = 0; i < extra_len; i++) {
-    	dbg_text[len + i] = DBG_EXTRA[i];
-    }
-    dbg_text[len + extra_len] = '\0';
-    SDL_RenderDebugText(renderer, 0, 0, dbg_text);
-
 
 	SDL_FRect rect = {0, 0, ScreenWidth, ScreenHeight};
 	SDL_SetRenderDrawColor(renderer, BackgroundColor[0], BackgroundColor[1], BackgroundColor[2], BackgroundColor[3]);
     SDL_RenderFillRect(renderer, &rect);
-
-
-    itoa(frameSz, dbg_text, 10);
-    len = strlen(dbg_text);
-    extra_len = strlen(DBG_EXTRA);
-    for(size_t i = 0; i < extra_len; i++) {
-    	dbg_text[len + i] = DBG_EXTRA[i];
-    }
-    dbg_text[len + extra_len] = '\0';
-    SDL_RenderDebugText(renderer, 0, 0, dbg_text);
 
     Counter_RenderStatic(renderer, ClickCount, Utils_MiddleWidth(Counter_Width), Counter_PosY());
     Counter_RenderAnimation(renderer, BackgroundColor);
@@ -91,15 +71,15 @@ void App_Render() {
     	}
     }
     
-    itoa(frameSz, dbg_text, 10);
-    len = strlen(dbg_text);
-    extra_len = strlen(DBG_EXTRA);
+    char dbg_text[40];
+    sprintf(dbg_text, "%i", (int) frameSz);
+    uint64_t len = strlen(dbg_text);
+    uint64_t extra_len = strlen(DBG_EXTRA);
     for(size_t i = 0; i < extra_len; i++) {
     	dbg_text[len + i] = DBG_EXTRA[i];
     }
     dbg_text[len + extra_len] = '\0';
     SDL_RenderDebugText(renderer, 0, 0, dbg_text);
-
 
     SDL_RenderPresent(renderer);
 
