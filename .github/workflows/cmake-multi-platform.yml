@@ -64,8 +64,12 @@ jobs:
       if: runner.os == 'Windows'
       shell: pwsh
       run: |
-        Invoke-WebRequest -Uri "https://github.com/libsdl-org/SDL/releases/latest/download/SDL3-devel-VC.zip" -OutFile "SDL3.zip"
-        Expand-Archive -Path "SDL3.zip" -DestinationPath "$env:GITHUB_WORKSPACE\SDL3"
+        git clone --depth 1 https://github.com/libsdl-org/SDL.git -b main
+        cd SDL
+        mkdir build
+        cd build
+        cmake .. -DCMAKE_INSTALL_PREFIX="$env:GITHUB_WORKSPACE\SDL3"
+        cmake --build . --config Release --target install
         echo "SDL3_PATH=$env:GITHUB_WORKSPACE\SDL3" | Out-File -FilePath $env:GITHUB_ENV -Append
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.

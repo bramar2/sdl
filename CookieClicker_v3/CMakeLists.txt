@@ -3,7 +3,7 @@ project(CookieClicker)
 
 set(SDL3_INCLUDE_DIR C:/Users/marce/cpp_libraries/SDL3-3.2.0/include)
 set(SDL3_LIBRARY C:/Users/marce/cpp_libraries/libs/SDL3.dll)
-set(CMAKE_C_FLAGS "-mwindows")
+#set(CMAKE_C_FLAGS "-mwindows")
 set(CMAKE_C_STANDARD 23)
 
 
