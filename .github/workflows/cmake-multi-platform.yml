@@ -60,6 +60,12 @@ jobs:
         sudo apt install -y \
           libx11-dev libxext-dev libxrandr-dev libxcursor-dev libxi-dev libxinerama-dev \
           libwayland-dev wayland-protocols libxkbcommon-dev libdbus-1-dev
+        git clone --depth 1 https://github.com/libsdl-org/SDL.git -b main
+        cd SDL
+        mkdir build
+        cd build
+        cmake .. -DCMAKE_INSTALL_PREFIX="${{ github.workspace }}/SDL3"
+        cmake --build . --config Release --target install
     - name: Install SDL3 (Windows)
       if: runner.os == 'Windows'
       shell: pwsh
