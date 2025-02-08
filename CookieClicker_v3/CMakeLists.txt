@@ -9,7 +9,3 @@ set(CMAKE_C_STANDARD 23)
 find_package(SDL3 REQUIRED CONFIG REQUIRED COMPONENTS SDL3-shared)
 add_executable(CookieClicker CookieClicker.c CookieClicker.h CookieBmp.c CookieBmp.h Counter.c Counter.h Screen.h Utils.c Utils.h Cookie.c Cookie.h Cursor.c Cursor.h)
 target_link_libraries(CookieClicker PRIVATE SDL3::SDL3)
-
-#include_directories(${SDL3_INCLUDE_DIR})
-#
-#target_link_libraries(CookieClicker ${SDL3_LIBRARY})
