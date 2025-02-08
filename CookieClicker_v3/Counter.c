@@ -30,8 +30,6 @@ const Uint64 AnimateProgressMs = 4;
 const int AnimationProgressEnd = 66;
 Uint64 LastAnimateTick = 0;
 
-int Counter_PosY;
-
 void RenderRect(SDL_Renderer *renderer, int x, int y, int w, int h) {
 	SDL_FRect tmp = {x, y, w, h};
 	SDL_RenderFillRect(renderer, &tmp);
@@ -169,9 +167,12 @@ void RenderDigitAnimation(SDL_Renderer *renderer, const int *backgroundColor, An
 	}
 }
 
-void Counter_Init() {
-	Counter_PosY = ScreenWidth * 15 / 100;
+
+int Counter_PosY() {
+	return ScreenWidth * 15 / 100;
 }
+
+void Counter_Init() {}
 
 void Counter_AnimateChange(int currentValue, int targetValue) {
 	char current[10], target[10];
@@ -182,7 +183,7 @@ void Counter_AnimateChange(int currentValue, int targetValue) {
 	int position = Utils_MiddleWidth(Counter_Width) + (Counter_Digits - 1) * Counter_DigitDistance;
 	while(beforeLength > 0 && afterLength > 0) {
 		if(current[beforeLength - 1] != target[afterLength - 1]) {
-			AddAnimation(position, Counter_PosY, current[beforeLength - 1] - '0', target[afterLength - 1] - '0');
+			AddAnimation(position, Counter_PosY(), current[beforeLength - 1] - '0', target[afterLength - 1] - '0');
 		}
 
 		position -= Counter_DigitDistance;
@@ -190,7 +191,7 @@ void Counter_AnimateChange(int currentValue, int targetValue) {
 	}
 	while(beforeLength > 0) {
 		if(current[beforeLength - 1] != '0') {
-			AddAnimation(position, Counter_PosY, current[beforeLength - 1] - '0', 0);
+			AddAnimation(position, Counter_PosY(), current[beforeLength - 1] - '0', 0);
 		}
 
 		position -= Counter_DigitDistance;
@@ -198,7 +199,7 @@ void Counter_AnimateChange(int currentValue, int targetValue) {
 	}
 	while(afterLength > 0) {
 		if(target[afterLength - 1] != '0') {
-			AddAnimation(position, Counter_PosY, 0, target[afterLength - 1] - '0');
+			AddAnimation(position, Counter_PosY(), 0, target[afterLength - 1] - '0');
 		}
 
 		position -= Counter_DigitDistance;

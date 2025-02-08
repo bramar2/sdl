@@ -1,6 +1,7 @@
 #include "SDL3/SDL_log.h"
 #include "SDL3/SDL_oldnames.h"
 #include "SDL3/SDL_timer.h"
+#include "SDL3/SDL_video.h"
 #include <SDL3/SDL_render.h>
 #include <SDL3/SDL_init.h>
 #include <SDL3/SDL_events.h>
@@ -18,7 +19,7 @@ int main() {
 		SDL_Log("error initializing SDL: %s\n", SDL_GetError());
 		return 1;
 	}
-	if(!SDL_CreateWindowAndRenderer("Test", 640, 480, 0, &window, &renderer)) {
+	if(!SDL_CreateWindowAndRenderer("Test", 640, 480, SDL_WINDOW_RESIZABLE, &window, &renderer)) {
         SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
         return 1;
     }

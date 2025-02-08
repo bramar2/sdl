@@ -7,13 +7,15 @@
 const int CookieBopTime = 2500;
 const float CookieBopRoom = 0.125;
 const float CookieBaseSize = 1.2;
-int CookieY;
 
 SDL_Surface *CookieSurface;
 SDL_Texture *CookieTexture;
 
+int CookieY() {
+	return (Counter_PosY() + Counter_DigitHeight) + ScreenHeight / 10;
+}
+
 void Cookie_Init(SDL_Renderer *renderer) {
-	CookieY = (Counter_PosY + Counter_DigitHeight) + ScreenHeight / 10;
 	SDL_IOStream *stream = SDL_IOFromConstMem(CookieBmp_mem, CookieBmp_len);
     CookieSurface = SDL_LoadBMP_IO(stream, true);
     CookieTexture = SDL_CreateTextureFromSurface(renderer, CookieSurface);
@@ -31,14 +33,15 @@ void Cookie_Render(SDL_Renderer *renderer) {
     }
     SDL_FRect destrect = {
     	Utils_MiddleWidth(CookieTexture->w) - (mult - 1) * CookieTexture->w / 2,
-    	CookieY - (mult - 1) * CookieTexture->h / 2,
+    	CookieY() - (mult - 1) * CookieTexture->h / 2,
     	mult * CookieTexture->w,
     	mult * CookieTexture->h};
     SDL_RenderTexture(renderer, CookieTexture, NULL, &destrect);
 }
 
 bool Cookie_Contains(SDL_Renderer *renderer, int x, int y) {
-	if(y <= (Counter_PosY + Counter_DigitHeight + 5)) return false;
+	if(!(1 <= x && x < ScreenWidth && 1 <= y && y < ScreenHeight)) return false;
+	if(y <= (Counter_PosY() + Counter_DigitHeight + 5)) return false;
 	Uint8 r, g, b;
 
 	SDL_Rect rect = {x, y, 1, 1};
