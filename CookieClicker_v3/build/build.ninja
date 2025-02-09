@@ -46,42 +46,42 @@ build cmake_object_order_depends_target_CookieClicker: phony || .
 
 build CMakeFiles/CookieClicker.dir/CookieClicker.c.obj: C_COMPILER__CookieClicker_unscanned_ C$:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3/CookieClicker.c || cmake_object_order_depends_target_CookieClicker
   DEP_FILE = CMakeFiles\CookieClicker.dir\CookieClicker.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -mwindows -std=gnu2x
   INCLUDES = -IC:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/include
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   OBJECT_FILE_DIR = CMakeFiles\CookieClicker.dir
 
 build CMakeFiles/CookieClicker.dir/CookieBmp.c.obj: C_COMPILER__CookieClicker_unscanned_ C$:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3/CookieBmp.c || cmake_object_order_depends_target_CookieClicker
   DEP_FILE = CMakeFiles\CookieClicker.dir\CookieBmp.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -mwindows -std=gnu2x
   INCLUDES = -IC:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/include
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   OBJECT_FILE_DIR = CMakeFiles\CookieClicker.dir
 
 build CMakeFiles/CookieClicker.dir/Counter.c.obj: C_COMPILER__CookieClicker_unscanned_ C$:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3/Counter.c || cmake_object_order_depends_target_CookieClicker
   DEP_FILE = CMakeFiles\CookieClicker.dir\Counter.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -mwindows -std=gnu2x
   INCLUDES = -IC:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/include
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   OBJECT_FILE_DIR = CMakeFiles\CookieClicker.dir
 
 build CMakeFiles/CookieClicker.dir/Utils.c.obj: C_COMPILER__CookieClicker_unscanned_ C$:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3/Utils.c || cmake_object_order_depends_target_CookieClicker
   DEP_FILE = CMakeFiles\CookieClicker.dir\Utils.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -mwindows -std=gnu2x
   INCLUDES = -IC:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/include
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   OBJECT_FILE_DIR = CMakeFiles\CookieClicker.dir
 
 build CMakeFiles/CookieClicker.dir/Cookie.c.obj: C_COMPILER__CookieClicker_unscanned_ C$:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3/Cookie.c || cmake_object_order_depends_target_CookieClicker
   DEP_FILE = CMakeFiles\CookieClicker.dir\Cookie.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -mwindows -std=gnu2x
   INCLUDES = -IC:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/include
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   OBJECT_FILE_DIR = CMakeFiles\CookieClicker.dir
 
 build CMakeFiles/CookieClicker.dir/Cursor.c.obj: C_COMPILER__CookieClicker_unscanned_ C$:/Users/marce/CLionProjects/SDLTest/CookieClicker_v3/Cursor.c || cmake_object_order_depends_target_CookieClicker
   DEP_FILE = CMakeFiles\CookieClicker.dir\Cursor.c.obj.d
-  FLAGS = -std=gnu2x
+  FLAGS = -mwindows -std=gnu2x
   INCLUDES = -IC:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/include
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   OBJECT_FILE_DIR = CMakeFiles\CookieClicker.dir
@@ -95,6 +95,7 @@ build CMakeFiles/CookieClicker.dir/Cursor.c.obj: C_COMPILER__CookieClicker_unsca
 # Link the executable CookieClicker.exe
 
 build CookieClicker.exe: C_EXECUTABLE_LINKER__CookieClicker_ CMakeFiles/CookieClicker.dir/CookieClicker.c.obj CMakeFiles/CookieClicker.dir/CookieBmp.c.obj CMakeFiles/CookieClicker.dir/Counter.c.obj CMakeFiles/CookieClicker.dir/Utils.c.obj CMakeFiles/CookieClicker.dir/Cookie.c.obj CMakeFiles/CookieClicker.dir/Cursor.c.obj | C$:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/lib/libSDL3.dll.a
+  FLAGS = -mwindows
   LINK_LIBRARIES = C:/Users/marce/cpp_libraries/SDL3-3.2.4/x86_64-w64-mingw32/lib/libSDL3.dll.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CookieClicker.dir
   POST_BUILD = cd .
