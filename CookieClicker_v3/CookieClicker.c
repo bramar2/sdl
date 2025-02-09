@@ -1,5 +1,4 @@
 #include "Cookie.h"
-#include "CookieClicker.h"
 #include "Counter.h"
 #include "Cursor.h"
 #include "SDL3/SDL_events.h"
@@ -9,6 +8,7 @@
 #include <assert.h>
 #include <time.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 int ScreenWidth = 640;
 int ScreenHeight = 640;
@@ -25,6 +25,8 @@ Uint32 frame_times[10000];
 size_t frameStart = 0, frameSz = 0;
 
 const char *DBG_EXTRA = " FPS | github.com/bramar2/sdl";
+
+void App_Render();
 
 void App_Initialize() {
 	if(!SDL_Init(SDL_INIT_AUDIO | SDL_INIT_VIDEO)) {
@@ -119,7 +121,6 @@ void App_EventLoop() {
 	    Cursor_Loop(renderer);
 	    App_Render();
     }
-    App_Quit();
 }
 
 void App_Quit() {
@@ -136,5 +137,6 @@ int main(int argc, char **argv) {
 	App_Initialize();
 	App_Render();
 	App_EventLoop();
+	App_Quit();
 	return 0;
 }
